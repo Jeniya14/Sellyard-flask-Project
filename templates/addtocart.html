@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add to Cart</title>
+    <style>
+        .ths {
+        background-color:#aaa;
+        padding:10px;
+        }
+        .tds {
+        background-color:#eee;
+        padding:10px;
+        }
+        .cartDesign {
+        background-color:#fff;
+        padding:50px 100px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<div class="cartDesign">
+    <H1>CART</H1>
+            <table>
+                <tr>
+                    <th class="ths">S.No</th>
+                    <th class="ths">Particulars</th>
+                    <th class="ths">Quantity</th>
+                    <th class="ths">Rate</th>
+                    <th class="ths">Amount</th>
+                </tr>
+
+            {% for row in data: %}
+            <tr>
+
+                <td class="tds">{{ row[0] }}</td>
+                <td class="tds">{{ row[1] }}</td>
+                <td class="tds"> {{ row[2] }}</td>
+                <td class="tds"> {{ row[3] }}</td>
+                <td class="tds"> {{ row[4] }}</td>
+               </tr>
+            {% endfor %}
+                </table>
+</div>
+
+<div>
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

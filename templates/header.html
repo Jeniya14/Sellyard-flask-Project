@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>farm</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body
+{
+margin:0px;
+}
+.jeni01
+{
+ background-color:#66CC00;
+ height:100px;
+ margin:0;
+}
+.jeni1
+{
+ color:white;
+ width:450px;
+ float:left;
+ padding:10px;
+  font-family:sans serif;
+}
+.jen
+{
+ padding:5px;
+ padding-right:20px;
+ color:grey;
+ text-decoration: none;
+ font-size:21px;
+ border:none;
+}
+.jen:hover
+{
+color:#66CC00;
+}
+.tabwidth
+{
+ width:1500px;
+ margin:0px;
+ border-spacing:0px;
+}
+#search-box
+{
+ float:left;
+ height: 50px;
+ width:450px;
+ border-radius:50px;
+ border:1px solid #66CC00;
+ font-size:20px;
+}
+.buttoni
+{
+border-radius:50px;
+border:1px solid #66CC00;
+height:50px;
+width:60px;
+}
+.buttoni:hover
+{
+box-shadow:1px 2px 5px black;
+cursor: pointer;
+}
+.header2background
+{
+display:block;
+background-color:white;
+border-bottom:4px solid #66CC00;
+height:45px;
+padding:5px;
+}
+.dropbtn {
+  background-color: white;
+  color: grey;
+  padding: 10px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  float:center;
+}
+.dropdown-content a {
+  color: black;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+color:#66CC00;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  color: #66CC00;
+}
+.desc {
+  padding: 10px;
+  text-align: center;
+}
+        .jeni
+        {
+         width: 100%;
+         height: 230px;
+         background:#404040;
+         color:white;
+        }
+        .tbcls
+        {
+        padding:30px;
+        width:300px;
+        }
+        .bottomline
+        {
+         background-color:#66CC00;
+         color:white;
+         height:25px;
+         padding:5px;
+        }
+.butto1
+{
+background-color:white;
+padding:5px;
+border-radius:10px;
+color:#66cc00;
+width:100px;
+height:100px;
+cursor: pointer;
+font-size: 30px;
+}
+.butto1:hover
+{
+box-shadow:1px 2px 5px black;
+border:1px solid #66CC00;
+}
+</style>
+
+</head>
+<body>
+<div class="jeni01">
+<table border="0" class="tabwidth">
+ <tr>
+   <td>
+       <div class="jeni1"><h1> Sellyard </h1></div>
+   </td>
+
+   <td>
+      <input type="search" id="search-box" placeholder="search here...">
+       <button class="buttoni" type="submit" onclick="search()"><i class="fa fa-search" style="font-size:34px;color:#66CC00"></i></button>
+       <a href="/profile" ><button class="buttoni" type="submit" ><i class="fa fa-user" style="font-size:34px;color:#66CC00"></i></button></a>
+       <script src="./script.js"></script>
+       <a href="/logout" class="butto1">log out</a>
+   </td>
+ </tr>
+</table>
+</div>
+    <div class="header2background">
+         <center>
+            <a class="jen" href="home">Home</a>
+            <a class="jen" href="aboutus">About us</a>
+             <div class="dropdown">
+                 <button class="dropbtn">Deals <i class="fa fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                        <table><tr><td><a href="fruits"> <img src="/static/deals.jpg" alt="deals" width="300" height="200"></a>
+                     <div class="desc">best sales</div></td>
+                         <td><a href="handcraft"> <img src="/static/specialdeal.jpg" alt="deals" width="300" height="200"></a>
+                             <div class="desc">Special product </div></td>
+                        </tr></table>
+                    </div>
+             </div>
+             <div class="dropdown">
+                <button class="dropbtn">Category <i class="fa fa-angle-down"></i>
+                </button>
+                    <div class="dropdown-content">
+                        <a href="fruits">Fruits</a>
+                        <a href="vegetables">Vegetables</a>
+                        <a href="homemade">Home made</a>
+                        <a href="handcraft">Handcrafts</a>
+                        <a href="#">Gifts</a>
+                    </div>
+             </div>
+              <div class="dropdown">
+                <button class="dropbtn">My Account <i class="fa fa-angle-down"></i></button>
+                    <div class="dropdown-content">
+                        <a href="#">My Wishlist</a>
+                        <a href="order">My Order</a>
+                        <a href="#">My Cart</a>
+                    </div>
+             </div>
+		 </center>
+   </div>
+<br><br>
+</body>
+</html>

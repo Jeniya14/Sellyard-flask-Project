@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Contact Us</title>
+     <style>
+    .black
+    {
+    width:1600px;
+    height:350px;
+    }
+.button
+{
+width:1600px;
+height:350px;
+background-color:white;
+bottom:350px;
+position:relative;
+border:2px solid black;
+background:rgba(0,0,0,0.4);
+}
+.white{
+background-color:white;
+height:180px;
+width:1600px;
+position:relative;
+bottom:534px;
+}
+.text{
+position:absolute;
+top:-10px;
+font-size:50px;
+color:white;
+left:670px;
+}
+.view
+{
+position:absolute;
+top:80px;
+font-size:25px;
+color:white;
+left:680px;
+}
+.contact{
+position:absolute;
+top:-50px;
+left:250px;
+psdding:20px;
+}
+.call
+{
+position:absolute;
+top:200px;
+left:300px;
+height:50px;
+width:50px;
+}
+.location
+{
+position:absolute;
+top:200px;
+left:550px;
+height:50px;
+width:50px;
+}
+.time
+{
+position:absolute;
+top:200px;
+left:800px;
+height:50px;
+width:50px;
+}
+.map
+{
+position:absolute;
+top:200px;
+left:1040px;
+height:50px;
+width:50px;
+}
+.call1{
+position:absolute;
+top:265px;
+left:300px;
+width:100px;
+
+}
+.location1
+{
+position:absolute;
+top:265px;
+left:530px;
+width:200px;
+}
+.time1
+{
+position:absolute;
+top:265px;
+left:800px;
+width:150px;
+}
+.map1
+{
+position:absolute;
+top:265px;
+left:1040px;
+width:100px;
+
+}
+ </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<div class="sree">
+    <img class="black" src="image/jss.jpg">
+</div>
+<div class="button">
+    <p class="text"> Contact Us</p>
+    <p class ="view">HOME- contact us</p>
+</div>
+<div class="white">
+    <div class="contact">
+<div class="tool">
+    </div>
+        </div>
+    </div>
+<div>
+    <img class="call" src="image/bg.jpg"><BR>
+
+</div>
+
+        <span class="call1"><b>PHONE</b><br>
++01-2222-5632
+    </span>
+
+<div class="source">
+    <img class="location" src="image/phone.jpeg">
+
+</div>
+        <span class="location1"> <b>ADDRESS</b><br>
+            60-49 road 112367 bangalore
+        </span>
+        <div class="link">
+<img class="time" src="image/location.jpeg">
+
+        </div>
+        <span class="time1"> <b>OPENTIME</b><br>
+            10.00 am to 2.30 pm
+        </span>
+<div class="box">
+<img class="map" src="image/email.jpeg">
+
+</div>
+        <span class="map1"> <b>EMAIL</b><br>
+            srijeni@gmail.com
+        </span>
+
+<div>
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

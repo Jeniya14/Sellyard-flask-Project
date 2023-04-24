@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add products</title>
+  <style>
+         body
+      {
+      background-image:url(/static/bgaddprod.jpg);
+        background-size: cover;
+         background-attachment: fixed;
+
+      }
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+         .txtbox{
+    padding:10px;
+    width:100%;
+    border-radius:5px;
+    border:2px solid #660066;
+    font-size:15px;
+    }
+.header
+{
+background-color:rgba(102,224,102,0.5);
+ padding:50px;
+ width:700px;
+ box-shadow: 5px 10px grey;
+ border-radius:20px;
+ }
+.box1
+{
+ padding:10px;
+ font-size:20px;
+ width:100px;
+ border:2px solid #669900;
+ border-radius:10px;
+ background-color:#ffffff;
+ color:#669900;
+}
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+
+<div class="nv">
+    <a class="na" href="/Productdetails" style="border-top-left-radius:20px;">Product Details </a>
+    <a class="na" href="/addproducts" style="background-color:#006600;">Add Products </a>
+</div>
+<br><br>
+<div class="mid" >
+    <div class="header">
+        <form action="/addproducts" method="post">
+         <h3>Product Name</h3>
+             <input class="txtbox" type="text"  id="fruit_name" name="fruit_name"><br>
+           <h3>Product quantity</h3>
+             <input class="txtbox" type="text"  id="fruit_weight" name="fruit_weight"><br>
+           <h3>Product rate</h3>
+             <input class="txtbox" type="text" id="fruit_rate" name="fruit_rate"><br>
+           <h3>Product Description</h3>
+             <input class="txtbox" type="text" id="fruit_desc" name="fruit_desc"><br>
+           <h3>Product image</h3>
+             <input class="txtbox" type="file" id="fruit_image" name="fruit_image"><br>
+<br>
+                <input class="box1" type="submit" value="Add">
+         <br>
+         <br>
+        </form>
+    </div>
+</div>
+<br>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<br>
+<br>
+<div class="nv">
+    <a class="na" href="/Productdetails" style="border-top-left-radius:20px;">Product Details </a>
+    <a class="na" href="/addproducts" >Add Products </a>
+   <a class="na" href="/SellerAccInfo" >Accounts Setting </a>
+   <a class="na" href="/sorder" style="border-bottom-right-radius:20px;">Order status </a>
+</div>
+<br><br>
+<div class="bg">
+
+    <div>
+        <table border="1">
+            <tr>
+                <th>order_id</th>
+                <th>Order_date</th>
+                <th>username</th>
+                 <th>Particular</th>
+                <th>rate</th>
+                <th>quantity</th>
+                <th>Order status</th>
+            </tr>
+            {% for row in data: %}
+            <tr>
+                <td> <h3>{{ row[0] }}</h3></td>
+                <td> <h3>{{ row[1] }}</h3></td>
+                <td> <p>{{ row[2] }}</p></td>
+                <td> <p>{{ row[4] }}</p></td>
+                 <td> <p>{{ row[5] }}</p></td>
+                  <td> <p>{{ row[6] }}</p></td>
+
+            </tr>
+             {% endfor %}
+        </table>
+</div>
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

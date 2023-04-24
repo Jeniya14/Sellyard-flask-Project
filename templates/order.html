@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order</title>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<div class="cartDesign">
+    <H1>CART</H1>
+            <table>
+                <tr>
+                    <th class="ths">orderid</th>
+                    <th class="ths">order date</th>
+                    <th class="ths">User id</th>
+                    <th class="ths">User name</th>
+                    <th class="ths">particular</th>
+                     <th class="ths">rate</th>
+                     <th class="ths">Quantity</th>
+                    <th class="ths">Order status</th>
+                </tr>
+
+            {% for row in data: %}
+            <tr>
+
+                <td class="tds">{{ row[0] }}</td>
+                <td class="tds">{{ row[1] }}</td>
+                <td class="tds"> {{ row[2] }}</td>
+                <td class="tds"> {{ row[3] }}</td>
+                <td class="tds"> {{ row[4] }}</td>
+                <td class="tds"> {{ row[5] }}</td>
+                <td class="tds"> {{ row[6] }}</td>
+                <td class="tds"> {{ row[7] }}</td>
+                <td class="tds"> {{ row[8] }}</td>
+               </tr>
+            {% endfor %}
+                </table>
+</div>
+
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

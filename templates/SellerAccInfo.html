@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Seller Account Info</title>
+  <style>
+     body
+      {
+      background-image:url(/static/bgaddprod.jpg);
+        background-size: cover;
+         background-attachment: fixed;
+
+      }
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+         .txtbox{
+    padding:10px;
+    width:100%;
+    border-radius:5px;
+    border:2px solid #660066;
+    font-size:15px;
+    }
+.mid
+{
+padding-left:400px;
+}
+.box
+{
+ padding:10px;
+ font-size:20px;
+ width:100px;
+ border:2px solid #669900;
+ border-radius:10px;
+ background-color:#ffffff;
+ color:#669900;
+}
+        </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+
+<div class="nv">
+    <a class="na" href="Productdetails" style="border-top-left-radius:20px;">Product Details </a>
+    <a class="na" href="addproducts" style="background-color:#006600;">Add Products </a>
+   <a class="na" href="SellerAccInfo" >Accounts Setting </a>
+   <a class="na" href="sorder" style="border-bottom-right-radius:20px;">Order status </a>
+</div>
+<br><br>
+<div class="mid" >
+    <div class="header">
+      <center> <div class="inside-header"> <h1> <b>Account Setting</b></h1>
+       </div></center>
+          <form action="/sellerinfo" method="post">
+         <h3>Username</h3>
+         <input class="txtbox" type="text"  id="sellername" name="sellername">
+         <h3>Password</h3>
+             <input class="txtbox" type="text"  id="password" name="password"><br>
+           <h3>Email</h3>
+             <input class="txtbox" type="text" id="email" name="email"><br>
+           <h3>Address</h3>
+             <input class="txtbox" type="text"  id="address" name="address"><br>
+           <h3>Delivery</h3>
+             <input class="txtbox" type="text"  id="delivery" name="delivery"><br>
+<br>
+                <input class="box" type="submit" value="Update">
+         <br>
+         <br>
+          </form>
+    </div>
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

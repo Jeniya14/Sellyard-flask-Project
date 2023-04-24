@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+ <style>
+
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+        .tds
+{
+padding:20px;
+margin:50px;
+background-color:rgba(224,224,224,0.5);
+border-radius:10px;
+}
+.tab
+{
+padding:20px 30px;
+
+}
+.std
+{
+padding:30px;
+}
+td
+{
+padding:5px;
+width:150px;
+height:100px;
+}
+th
+{
+background-color:#66CC00;
+padding:10px;
+}
+.bg
+{
+margin:10px;
+};
+.del
+{
+color:green;
+}
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<div class="nv">
+    <a class="na" href="ManageProducts" style="border-top-left-radius:20px; background-color:#006600;">Manage Products </a>
+    <a class="na" href="ManageSellers" style="border-bottom-right-radius:20px;">Manage Sellers </a>
+</div>
+<br><br>
+  <div class="msg">{{ msg }}</div>
+<div>
+    <h1>Fruits</h1>
+</div>
+
+<div class="bg">
+
+    <div>
+        <table border="1">
+            <tr>
+                <th>Fruit_id</th>
+                <th>Fruit_name</th>
+                <th>Fruit_weight</th>
+                <th>Fruit_rate</th>
+                <th>Fruit_Description</th>
+                <th>Fruit_image</th>
+                <th>Action</th>
+
+
+            </tr>
+            {% for row in data: %}
+            <tr>
+                <td> <h3>{{ row[0] }}</h3></td>
+                <td> <h3>{{ row[1] }}</h3></td>
+                <td> <h3>{{ row[2] }}</h3></td>
+                <td> <b>Rs. {{ row[3] }}/-</b></td>
+                <td> <p>{{ row[4] }}</p></td>
+                <td><img src="/static/fruits/{{ row[5] }}" width="100px" height="80px"></td>
+                <td><a style="color:green;" href="/fruitsdelete?id={{ row[0] }}"><b> Delete</b></a></td>
+            </tr>
+             {% endfor %}
+        </table>
+</div>
+
+</div>
+<br>
+<div>
+    {% include "footer.html" %}
+</div>
+</body>
+</html>

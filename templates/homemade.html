@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>handmade</title>
+<style>
+ .box
+    {
+    background-color:#eee;
+    padding:10px;
+    width:335px;
+    margin:10px;
+
+    }
+    .btn
+    {
+    Float:right;
+    background-color:transparent;
+    border:double;
+    color:#66CC00;
+    cursor: pointer;
+    padding:10px 20px;
+    border-radius:10px;
+    border:2px solid #66CC00;
+    }
+    .btn:hover
+    {
+     color:white;
+     background-color:#66CC00;
+    }
+    </style>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+
+<div>
+    <h1>Our Homemade products</h1>
+    <div style="display:flex;flex-wrap:wrap;">
+            {% for row in data: %}
+            <div class="box" >
+                <font color="black" size="6">{{ row[1] }}</font><br>
+                <img src="/static/handmade/{{ row[5] }}" width="325px" height="240px"><br>
+                <p><font color="Black" size="4" >{{ row[4] }}</font></p><br>
+                <b>Rs. {{ row[3] }}/-</b>
+                 <p> <font color="green" size="4" >Available:{{ row[2] }}</font></p>
+               <p>Quantity :<input type="number" name="quantity" class="btn1" value="1" min="1" max="{{ row[2] }}">
+                 <a href="order" class="btn"><b>Add to cart</b></a>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>

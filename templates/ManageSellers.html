@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manage Sellers</title>
+   <style>
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+        td
+{
+padding:5px;
+width:150px;
+height:100px;
+}
+th
+{
+background-color:#66CC00;
+padding:10px;
+}
+.bg
+{
+margin:10px;
+};
+.del
+{
+color:green;
+}
+
+</style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<br>
+<br>
+<div class="nv">
+    <a class="na" href="ManageProducts" style="border-top-left-radius:20px;">Manage Products </a>
+    <a class="na" href="ManageSellers"  style="background-color:#006600; border-bottom-right-radius:20px;">Manage Sellers </a>
+
+</div>
+
+<br><br>
+  <h1>Seller info</h1>
+</div>
+
+<div class="bg">
+
+    <div>
+        <table border="1">
+            <tr>
+                <th>seller_id</th>
+                <th>seller name</th>
+                <th>password</th>
+                <th>email</th>
+                <th>Address</th>
+                <th>Delivery</th>
+                <th>Action</th>
+
+            </tr>
+            {% for row in data: %}
+            <tr>
+                  <td> <h3>{{ row[0] }}</h3></td>
+                <td> <h3>{{ row[1] }}</h3></td>
+                <td> <h3>{{ row[2] }}</h3></td>
+                <td> <b>{{ row[3] }}</b></td>
+                <td> <b>{{ row[4] }}</b></td>
+                <td> <b>{{ row[5] }}</b></td>
+                <td><a style="color:green;" href="/sellerdelete?id={{ row[0] }}"><b> Delete</b></a></td>
+            </tr>
+             {% endfor %}
+        </table>
+</div>
+
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+
+
+</body>
+</html>

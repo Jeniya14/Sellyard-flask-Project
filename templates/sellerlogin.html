@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>sellerlogin</title>
+ <style>
+    body
+    {
+     margin:80px;
+     background-color:white;
+     background-attachment: fixed;
+     background-position: left;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+    .jeniya01
+    {
+     background-color:rgba(255,204,255,0.9);
+     width:350px;
+     height:420px;
+     font-family: arial;
+     padding :20px;
+     margin:10px;
+     border-radius:10px;
+
+    }
+    .t
+    {
+    margin:1px;
+    }
+    td
+    {
+    padding:10px;
+    }
+    .box
+    {
+    width:170px;
+    height:30px;
+    border-radius:10px;
+    border:1px solid #990099;
+    background-color:#990099;
+    color:white;
+    font-size:20px;
+    }
+    .box:hover
+    {
+     background-color:#660066;
+     cursor: pointer;
+    }
+    .box1
+    {
+     width:170px;
+     height:25px;
+     color:#660066;
+     padding:8px;
+     border:1px solid #660066;
+     border-radius:10px;
+     background-color:transparent;
+     text-decoration:none;
+    }
+    .box1:hover
+    {
+     background-color:#E0E0E0;
+     cursor: pointer;
+    }
+    .txtbox{
+    padding:5px;
+    width:300px;
+    border-radius:5px;
+    border:2px solid #660066;
+    font-size:15px;
+    }
+
+    .msg
+    {
+    color:red;
+    }
+    </style>
+</head>
+<body>
+<CENTER>
+ <table border="0" class="t">
+    <tr>
+        <td>
+            <div class="jeniya01">
+                <center>
+                    <h1><b>Login form for Seller</b></h1>
+                </center>
+                 <div class="msg">{{ msg }}</div>
+                <form action="/slogin" method="post">
+                <h3>User Name</h3>
+                <input class="txtbox" type="text" placeholder="enter name" name="sellername" id="sellername" required>
+                <h3>Password</h3>
+                <input class="txtbox" type="password" placeholder="enter password" name="password" id="password" required><br><br>
+                    <input type="checkbox" onclick="myFunction()">Show Password
+
+                    <script>
+                            function myFunction() {
+                             var x = document.getElementById("password");
+                             if (x.type === "password") {
+                             x.type = "text";
+                             } else {
+                              x.type = "password";
+                             }
+                            }
+                    </script>
+<br><br><br>
+                <center><input class="box" type="submit" value="login"><br><br><br>
+                </center>
+                </form>
+            </div>
+        </td>
+        <td>
+            <img src="/static/logi.png" height="550x" width="550px">
+        </td>
+    </tr>
+ </table>
+    </CENTER>
+</body>
+</html>

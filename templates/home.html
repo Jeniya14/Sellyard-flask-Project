@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style>
+
+    .mySlides {
+    display: none;
+
+    }
+.my slides img {
+vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  width: 1500px;
+  height:600px;
+  box-sizing: border-box;
+  overflow:hidden;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+   position: absolute;
+  top: 20px;
+  right: 100px;
+  width: 100%;
+  text-align:right;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+.mySlides fade
+{
+ position: relative;
+  text-align: center;
+  color: white;
+}
+.butto
+{
+background-color:transparent;
+padding:2px;
+border:double;
+border-radius:10px;
+color:white;
+width:100px;
+height:40px;
+cursor: pointer;
+font-size: 20px;
+}
+.butto:hover
+{
+background-color:#66CC00;
+border:1px solid #66CC00;
+}
+.logo
+{
+border-radius:50%;
+opacity: 1;
+  display: block;
+  transition: .5s ease;
+  backface-visibility: hidden;
+}
+.logo:hover
+{
+background:black;
+opacity: 0.6;
+}
+.tds
+{
+padding:20px;
+margin:50px;
+background-color:rgba(224,224,224,0.5);
+border-radius:10px;
+}
+.tab
+{
+padding:20px 30px;
+
+}
+.std
+{
+padding:30px;
+}
+</style>
+<body>
+<div>
+    {% include "header.html" %}
+</div><br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+
+  <img src="/static/vege.jpg" style="width100%">
+    <div class="text"><font color="#99FF99" size="6">  FRESH VEGETABLES </font><br>
+ <font color="white" size="10">Vegetable<br>
+100% Organic<br>
+Free Pickup and Delivery Available<br>
+     <a href="/fruits">  <button class="butto">shop</button></a>
+
+ </font>
+    </div>
+</div>
+
+<div class="mySlides fade">
+  <img src="/static/fruity.jpg" style="width:100%">
+  <div class="text"><font color="#99FF99" size="6">FRESH FRUITS </font><br>
+ <font color="white" size="10">Fruits<br>
+100% Organic<br>
+Free Pickup and Delivery Available<br>
+    <a href="/fruits"> <button class="butto">shop</button></a>
+
+ </font></div>
+</div>
+
+<div class="mySlides fade">
+  <img src="/static/soap.jpg" style="width:100%">
+  <div class="text"><font color="#99FF99" size="6">HOMEMADE </font><br>
+ <font color="white" size="10">Customised soap<br>
+100% Organic<br>
+Free Pickup and Delivery Available<br>
+     <a href="/homemade"> <button class="butto">shop</button></a>
+
+ </font></div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+
+<div>
+    <h1>Product</h1>
+    <table class="tab" border="0">
+    <tr>
+        <td class="std"></td>
+        <td class="tds"><a href="fruits"> <img class="logo" src="/static/fruitlogo.jpg" height="150px" width="150px"></a>
+      <br><center><label>Fruits</label></center></td><td class="std"></td>
+        <td class="tds"><a href="vegetables"> <img class="logo" src="/static/vegelogo.jpg" height="150px" width="150px"></a>
+      <br><center><label>Vegetables</label></center></td><td class="std"></td>
+        <td class="tds"><a href="homemade"> <img class="logo" src="/static/homemadelogo.jpg" height="150px" width="150px"></a>
+      <br><center><label>Homemade</label></center></td><td class="std"></td>
+        <td class="tds"><a href="handcraft"> <img class="logo" src="/static/pott.jpg" height="150px" width="150px"></a>
+      <br><center><label>Handcraft</label></center></td>
+    </tr></table>
+</div>
+
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

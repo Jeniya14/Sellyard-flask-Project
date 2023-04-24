@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin</title>
+    <style>
+
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<br>
+<br>
+<div class="nv">
+    <a class="na" href="ManageProducts" style="border-top-left-radius:20px;">Manage Products </a>
+    <a class="na" href="ManageSellers" style="border-bottom-right-radius:20px;">Manage Sellers </a>
+</div>
+<br><br>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

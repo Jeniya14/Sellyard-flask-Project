@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Registration</title>
+    <style>
+     body
+    {
+     margin:80px;
+     background-color:white;
+     background-attachment: fixed;
+     background-position: left;
+     background-repeat: no-repeat;
+     background-size: cover;
+    }
+    .jeniya01
+    {
+     background-color:rgba(255,204,255,0.9);
+     width:400px;
+     height:840px;
+     font-family: arial;
+     padding :10px;
+     margin:5px;
+     border-radius:10px;
+
+    }
+    .t
+    {
+    margin:1px;
+    }
+    td
+    {
+    padding:20px;
+    }
+    .box
+    {
+    width:170px;
+    height:30px;
+    border-radius:10px;
+    border:1px solid #990099;
+    background-color:#990099;
+    color:white;
+    font-size:20px;
+    }
+    .box:hover
+    {
+     background-color:#660066;
+     cursor: pointer;
+    }
+    .box1
+    {
+     width:170px;
+     height:30px;
+     color:#660066;
+     border:1px solid #660066;
+     border-radius:10px;
+     background-color:transparent;
+    }
+    .box1:hover
+    {
+     background-color:#E0E0E0;
+     cursor: pointer;
+    }
+    .txtbox{
+    padding:5px;
+    width:300px;
+    border-radius:5px;
+    border:2px solid #660066;
+    font-size:15px;
+    }
+    </style>
+</head>
+<body>
+<div>
+   <CENTER>
+ <table border="0" class="t">
+    <tr>
+        <td>
+            <div class="jeniya01">
+                <center>
+                    <h1><b>Registration form</b></h1>
+                </center>
+                 <form action="/registration" method="post">
+                  <div class="msg">{{ msg }}</div>
+                <h3>User Name</h3>
+                <input class="txtbox" type="text" placeholder="enter name" name="username" id="username" required>
+                <h3>Password</h3>
+                <input class="txtbox" type="password" placeholder="enter password" name="password" id="password" required>
+                 <h3>email id</h3>
+                <input class="txtbox" type="text" placeholder="abx@gmail.com" name="email" id="email" required>
+                     <h3>First Name</h3>
+                <input class="txtbox" type="text" placeholder="enter name" name="firstname" id="firstname" required>
+                <h3>Last Name</h3>
+                <input class="txtbox" type="text" placeholder="enter name" name="lastname" id="lastname" required>
+                <br><br>
+                <center><input class="box" type="submit" value="login"><br><br>
+                </center>
+                 </form>
+            </div>
+        </td>
+        <td>
+            <img src="/static/regi1.jpg" height="550x" width="550px">
+        </td>
+    </tr>
+ </table>
+    </CENTER>
+</div>
+</body>
+</html>

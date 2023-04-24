@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+ <style>
+
+        .na
+        {
+        text-decoration:none;
+        color:white;
+        background-color:#009900;
+        border:3px solid white;
+         padding:20px;
+         font-size:24px;
+        }
+        .na:hover
+        {
+         background-color:#006600;
+         color:white;
+        }
+th
+{
+background-color:#66CC00;
+padding:10px;
+}
+
+    </style>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<br>
+<br>
+<div class="nv">
+    <a class="na" href="/Productdetails" style="border-top-left-radius:20px; background-color:#006600;">Product Details </a>
+    <a class="na" href="/addproducts" >Add Products </a>
+</div>
+<br><br>
+ <div>
+        <table border="1">
+            <tr>
+                <th>Fruit_id</th>
+                <th>Fruit_name</th>
+                <th>Fruit_weight</th>
+                <th>Fruit_rate</th>
+                <th>Fruit_Description</th>
+                <th>Fruit_image</th>
+                <th>Action</th>
+                <th>Action</th>
+
+
+
+            </tr>
+            {% for row in data: %}
+            <tr>
+                <td> <h3>{{ row[0] }}</h3></td>
+                <td> <h3>{{ row[1] }}</h3></td>
+                <td> <h3>{{ row[2] }}</h3></td>
+                <td> <b>Rs. {{ row[3] }}/-</b></td>
+                <td> <p>{{ row[4] }}</p></td>
+                <td><img src="/static/fruits/{{ row[5] }}" width="100px" height="80px"></td>
+                <td><a style="color:green;" href="/fruitsupdate?id={{ row[0] }}"><b> Update</b></a></td>
+                <td><a style="color:green;" href="/productsdelete?id={{ row[0] }}"><b> Delete</b></a></td>
+            </tr>
+             {% endfor %}
+        </table>
+
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

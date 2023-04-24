@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vegetables</title>
+</head>
+<style>
+
+    .box
+    {
+    background-color:#eee;
+    padding:10px;
+    width:330px;
+    margin:10px;
+    }
+   .btn
+    {
+    Float:right;
+    background-color:transparent;
+    border:double;
+    color:#66CC00;
+    cursor: pointer;
+    padding:10px 20px;
+    border-radius:10px;
+    border:2px solid #66CC00;
+    }
+    .btn:hover
+    {
+     color:white;
+     background-color:#66CC00;
+    }
+     .btn1
+    {
+    padding:5px; border-radius:10px; border:2px solid #66CC00;
+    }
+</style>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<div>
+    <h1>Vegetables</h1>
+    <div style="display:flex;flex-wrap:wrap;" id="vege">
+            {% for row in data: %}
+            <div class="box" >
+                <h3><font color="green" size="6">{{ row[1] }}</font></h3><br>
+                <a href="#"><img src="/static/vegetables/{{ row[5] }}" width="320px" height="240px"></a><br>
+                <p><font color="Black" size="4" >{{ row[4] }}</font></p>
+                <b>Rs. {{ row[3] }}/-</b>
+                 <p> <font color="green" size="4" >Available:{{ row[2] }}kg</font></p>
+                <p>Quantity :<input type="number" name="quantity" class="btn1" value="1" min="1" max="50"> <a href="order" class="btn"><b>Add to Cart</b></a></p>
+            </div>
+            {% endfor %}
+    </div>
+</div>
+<div>
+    {% include "footer.html" %}
+</div>
+
+</body>
+</html>

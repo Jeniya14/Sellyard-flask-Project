@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>delete</title>
+</head>
+<body>
+<div>
+    {% include "header.html" %}
+</div>
+<br>
+<center>
+    <h3>Delete Product</h3>
+
+</center>
+<form  method="POST" action="/deleteproduct">
+     {% for row in data %}
+ name
+ <input name="name" value="{{ row[1] }}" type="text" disabled>
+weight
+ <input name="weight" value="{{ row[2] }}" type="text"  disabled>
+rate
+<input name="description" value="{{ row[3] }}" type="text"  disabled>
+description
+<input name="rate" value="{{ row[4] }}" type="text"  disabled>
+image
+<input name="image" value="{{ row[5] }}" type="text"  disabled>
+   <input name="delete" type="submit" value="Delete">
+    {% endfor %}
+            </form>
+<br>
+<div>
+    {% include "footer.html" %}
+</div>
+</body>
+</html>
