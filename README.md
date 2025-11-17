@@ -1,6 +1,6 @@
 # Sellyard - Fruits, Vegetables, and Homemade Items Ordering and Selling Website
 
-Welcome to Sellyard, a project created during my college studies. Sellyard is a web application for ordering and selling fruits, vegetables, and homemade items. It features a frontend developed with HTML, CSS, and Flask framework for the backend, utilizing SQL for data storage.
+Welcome to Sellyard, a project created during my college studies in *2021*. Sellyard is a web application for ordering and selling fruits, vegetables, and homemade items. It features a frontend developed with HTML, CSS, and Flask framework for the backend, utilizing SQL for data storage.
 
 ## Introduction
 
